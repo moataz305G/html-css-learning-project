@@ -1,4 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body,
+.cotainer,
 .title,
 .button,
 .Course-img {
@@ -26,7 +32,7 @@ body {
   transform-origin: top left;
   color: #f0f8ff;
   background-color: #ff0000;
-  font-size: 18px;
+  font-size: 17px;
   border: none;
   padding: 5px 10px;
   border-radius: 6px;
@@ -49,12 +55,12 @@ body {
 
 .price {
   font-size: 24px;
+  margin-top: 0;
 }
 .description {
   font-size: 12px;
   color: #4f4e4e;
   text-transform: uppercase;
-
   font-weight: bold;
 }
 
@@ -67,51 +73,45 @@ body {
   text-decoration: none;
 }
 
-.course-roadmab {
+.roadmab-text {
   text-transform: capitalize;
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  margin-block-start: 15px;
+  margin-block-end: 5px;
 }
 
-.frontend-roadmab {
+.roadmab-courses {
   font-size: 16px;
   text-transform: uppercase;
   list-style: none;
   padding: 0px;
   margin: 0px;
-  display: flex;
-  gap: 10px;
 }
-#li-html {
+.li-Roadmab {
+  background-color: #f9f9f9;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.li-html {
   border: 2px solid #ffa500;
-  padding: 5px 10px;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  transition: 0.3s;
 }
-#li-css {
+.li-css {
   border: 2px solid #000ff0;
-  padding: 5px 10px;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  transition: 0.3s;
 }
-#li-js {
+.li-js {
   border: 2px solid #f6f62d;
-  padding: 5px 10px;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 .title-of-list {
   text-transform: capitalize;
   font-size: 16px;
   font-weight: bold;
+  margin-top: 0;
 }
 .list-item {
-  font-size: 14px;
+  font-size: 16px;
   list-style-type: square;
 }
 
@@ -124,28 +124,30 @@ body {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-align: center;
+  width: 100%;
 }
 .button:hover {
   background-color: #4777ff;
-  font-size: 22px;
 }
 
-/* float */
+.roadmab-courses {
+  display: flex;
+  gap: 10px;
+}
 .Course-img {
-  width: 250px;
-  float: left;
-}
-.Price-and-Roadmab {
-  width: 250px;
-  float: left;
-  margin-left: 20px;
-}
-.lest {
-  width: 250px;
-  float: right;
-}
-.button {
-  clear: both;
-  text-align: center;
   width: 100%;
+}
+/* Css grid */
+
+.cotainer {
+  display: grid;
+  grid-template-columns: 240px 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+
+.title,
+.button {
+  grid-column: 1/-1;
 }
