@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  font-family: sans-serif;
+  color: #444;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-block-end: 60px;
+  height: 80px;
+}
+.post-header {
+  margin-block-end: 40px;
+}
+h1,
+h2,
+h3 {
+  color: #3d4e60;
+}
+
+h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-block-end: 20px;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+h2 {
+  font-size: 38px;
+  margin-block-end: 30px;
+}
+.author {
+  font-size: 18px;
+  font-style: italic;
+}
+h3 {
+  font-size: 30px;
+  margin-block-end: 20px;
+  margin-block-start: 40px;
+}
+h4 {
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-block-end: 20px;
+  text-align: center;
+}
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 20px 5px;
+}
+
+ul,
+ol {
+  margin-inline-start: 50px;
+  margin-block-end: 20px;
+}
+
+ol article {
+  margin-block-end: 60px;
+}
+
+li {
+  font-size: 20px;
+  margin-block-end: 10px;
+  line-height: 1.5;
+}
+/* li:last-child {
+  margin-bottom: 0px;
+} */
+
+aside {
+  background-color: #f7f7f7;
+  padding: 50px 0px;
+}
+
+.related-post {
+  list-style: none;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* styling link */
+
+nav a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav a:link {
+  margin-inline-end: 20px;
+  color: #109ba1;
+  text-decoration: none;
+}
+
+.language-nav a:link {
+  margin-inline-end: 0;
+}
+
+a:visited {
+  color: #3af7fd;
+}
+
+a:hover {
+  color: #f0035a;
+  text-decoration: underline;
+}
+a:active {
+  background-color: black;
+}
+
+.reactions {
+  position: absolute;
+  right: 150px;
+  bottom: 60px;
+}
+
+.seprator {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* footer  */
+
+#copyright {
+  font-size: 16px;
+  color: #000000;
+}
+/* psudo-elements */
+
+h2::after {
+  content: "👀Trending👀";
+  background-color: #109ba0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  margin-inline-start: 15px;
+  margin-block-start: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/* rtl style */
+[dir="rtl"] body {
+  font-family: "Readex Pro", sans-serif;
+}
+
+/*[dir="rtl"] ul,
+ ol {
+  margin-right: 50px;
+} */
+[dir="rtl"] .reactions {
+  right: auto;
+  left: 150px;
+  bottom: 60px;
+}
+
+[dir="rtl"] h2::after {
+  content: "الاكثر مبيعآ👀";
+  /* margin-right: 15px;
+  margin-left: 0px;
+  margin-top: 0px; */
+}
+
+/* [dir="rtl"] nav a:link {
+  margin-right: auto;
+  margin-left: 30px;
+} */
+/* [dir="rtl"] nav a:link:last-child {
+  margin-left: 0;
+} */
+[dir="rtl"] .language-nav a:link {
+  margin-inline-end: 0;
+}
+[dir="rtl"] .seprator {
+  margin-right: 0;
+  margin-left: 30;
+}
+/* [dir="rtl"] .author {
+  margin-right: 10px;
+} */
+
+/* flexbox */
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-nav {
+  display: flex;
+  gap: 100px;
+}
+.row {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.author {
+  margin: 0;
+}
+.author-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+aside {
+  flex: 0 0 350px;
+}
+
+.related {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.related-author {
+  margin: 0;
+  font-weight: normal;
+  font-family: normal;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.related-link {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+footer {
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+/* CSS grid */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+}
+.main-header {
+  grid-column: 1/-1;
+}
